@@ -1,0 +1,5 @@
+{
+  "name": "Tadashi Sushi",
+  "description": "A beautiful and modern web application for a gourmet sushi restaurant, allowing users to browse the menu, place orders, and providing a live order monitoring view for the kitchen staff.",
+  "requestFramePermissions": []
+}

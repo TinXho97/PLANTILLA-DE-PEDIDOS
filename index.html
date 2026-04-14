@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tadashi Sushi | Experiencia Gourmet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+      
+      :root {
+          --tadashi-red: #d90429;
+          --tadashi-black: #0a0a0a;
+      }
+
+      body {
+          font-family: 'Montserrat', sans-serif;
+          background-color: var(--tadashi-black);
+          color: #ffffff;
+          scroll-behavior: smooth;
+      }
+
+      .font-jp { font-family: 'Noto Sans JP', sans-serif; }
+
+      .logo-ring {
+          position: relative;
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .logo-ring:hover {
+          transform: scale(1.1) rotate(5deg);
+      }
+
+      .logo-ring::after {
+          content: '';
+          position: absolute;
+          inset: -4px;
+          border: 2px solid var(--tadashi-red);
+          border-radius: 50%;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+      }
+
+      .logo-ring:hover::after {
+          opacity: 1;
+      }
+
+      .card-sushi {
+          transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+          background: linear-gradient(145deg, #111111, #050505);
+          border: 1px solid #1a1a1a;
+      }
+
+      .card-sushi:hover {
+          transform: translateY(-12px);
+          border-color: var(--tadashi-red);
+          box-shadow: 0 25px 50px -12px rgba(217, 4, 41, 0.4);
+      }
+
+      .active-tab {
+          color: var(--tadashi-red);
+          font-weight: 900;
+      }
+
+      .active-tab::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 24px;
+          height: 4px;
+          background-color: var(--tadashi-red);
+          border-radius: 4px;
+      }
+
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .thin-scrollbar::-webkit-scrollbar { width: 4px; }
+      .thin-scrollbar::-webkit-scrollbar-track { background: #1a1a1a; }
+      .thin-scrollbar::-webkit-scrollbar-thumb { background: #444; border-radius: 20px; }
+
+
+      .btn-glow {
+          position: relative;
+          overflow: hidden;
+      }
+
+      .btn-glow:hover {
+          box-shadow: 0 0 25px rgba(217, 4, 41, 0.6);
+          transform: scale(1.02);
+      }
+
+      .instagram-link {
+          transition: all 0.3s ease;
+      }
+      
+      .instagram-link:hover {
+          background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transform: translateY(-2px);
+      }
+
+      @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+
+      .animate-fade {
+          animation: fadeIn 0.8s ease forwards;
+      }
+
+      @keyframes slideInUp {
+          from { opacity: 0; transform: translateY(50px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .animate-slide-in-up {
+          animation: slideInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      }
+
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "rxjs": "https://esm.sh/rxjs@^7.8.2?conditions=es2015",
+    "rxjs/operators": "https://esm.sh/rxjs@^7.8.2/operators?conditions=es2015",
+    "rxjs/ajax": "https://esm.sh/rxjs@^7.8.2/ajax?conditions=es2015",
+    "rxjs/webSocket": "https://esm.sh/rxjs@^7.8.2/webSocket?conditions=es2015",
+    "rxjs/testing": "https://esm.sh/rxjs@^7.8.2/testing?conditions=es2015",
+    "rxjs/fetch": "https://esm.sh/rxjs@^7.8.2/fetch?conditions=es2015",
+    "@angular/core": "https://esm.sh/@angular/core@^21.0.6?external=rxjs",
+    "@angular/compiler": "https://esm.sh/@angular/compiler@^21.0.6?external=rxjs",
+    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.0.6?external=rxjs",
+    "@angular/common": "https://esm.sh/@angular/common@^21.0.6?external=rxjs",
+    "@google/genai": "https://esm.sh/@google/genai"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-black">
+  <app-root></app-root>
+</body>
+</html>
